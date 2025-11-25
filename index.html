@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz" data-default-lang="uz">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Munisbek Raimjonov | Web Dasturchi</title>
+        <title data-key="page_title">Munisbek Raimjonov | Web Dasturchi</title>
         <link rel="icon" type="image/png" href="/photos/Untitled.png">
 
         <link rel="stylesheet" href="diplom ishi.css"> 
@@ -17,236 +17,270 @@
             <div class="container">
                 <h1>M.R.</h1> 
                 <nav>
-                    <a href="#hero" class="nav-link">Asosiy</a>
-                    <a href="#about" class="nav-link">Men haqimda</a>
-                    <a href="#skills" class="nav-link">Ko'nikmalar</a>
-                    <a href="#projects" class="nav-link">Loyihalar</a>
-                    <a href="#contact" class="nav-link">Aloqa</a>
-                    <button id="theme-toggle" title="Yorug'/Qorong'i rejimni almashtirish">🌙</button> 
+                    <a href="#hero" class="nav-link" data-key="nav_home">Asosiy</a>
+                    <a href="#about" class="nav-link" data-key="nav_about">Men haqimda</a>
+                    <a href="#skills" class="nav-link" data-key="nav_skills">Ko'nikmalar</a>
+                    <a href="#contact" class="nav-link" data-key="nav_contact">Aloqa</a>
+                    
+                    <select id="language-selector" data-key="lang_selector_title" title="Tilni tanlash">
+                        <option value="uz">UZ</option>
+                        <option value="ru">RU</option>
+                        <option value="en">EN</option>
+                    </select>
+
+                    <button id="theme-toggle" data-key="theme_toggle_title" title="Yorug'/Qorong'i rejimni almashtirish">🌙</button> 
                 </nav>
             </div>
         </header>
 
         <main>
-            
             <section id="hero" class="section-full-height">
-                <div class="container">
+                <div class="container hero-container"> 
                     <div class="hero-content">
                         <p class="greeting" id="typing-text-container">
                             <span id="typing-text"></span>
-                            <span class="cursor">|</span>
-                        </p>
+                            <span class="cursor">|</span> </p>
                         
                         <div id="after-typing-content">
-                            <a href="#about" class="btn primary-btn" id="scroll-to-about">Ko'proq ma'lumot</a>
+                            <p class="summary-text" data-key="about_summary">
+                                Men <strong>1 yillik tajribaga</strong> ega, dinamik va yuqori ishlashga ega veb-saytlarni yaratishga ixtisoslashgan <strong>Frontend Dasturchiman</strong>. 
+                            </p>
+                            <a href="#about" class="btn primary-btn" id="scroll-to-about" data-key="btn_more_info">Ko'proq ma'lumot</a>
+                        </div>
+                    </div>
+
+                    <div id="laptop-3d-wrapper">
+                        <div class="laptop-model">
+                            <div class="laptop-screen">
+                                <div class="screen-content">
+                                    <a href="https://github.com/munisbekraimjonov33-spec/Munisbek.git" target="_blank" title="GitHub" class="app-icon"><i class="fab fa-github"></i></a>
+                                    <a href="https://www.youtube.com/channel/@Zortex_play" target="_blank" title="YouTube" class="app-icon"><i class="fab fa-youtube"></i></a>
+                                    <a href="https://t.me/Munisbek_Raimjonov" target="_blank" title="Telegram" class="app-icon"><i class="fab fa-telegram-plane"></i></a>
+                                    <a href="https://www.instagram.com/Raimjonov_08" target="_blank" title="Instagram" class="app-icon"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="laptop-keyboard">
+                                <div class="keys-row"></div>
+                                <div class="keys-row"></div>
+                                <div class="keys-row large-keys"></div>
+                                <div class="touchpad"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-<section id="about" class="section">
-    <div class="container">
-        <h3 class="section-title">Men haqimda</h3>
-        
-        <div class="about-content">
-            <p class="summary-text">
-                Men **1 yillik tajribaga** ega, dinamik va yuqori ishlashga ega veb-ilovalarni yaratishga ixtisoslashgan **Frontend Dasturchiman**. Toza, saqlanishi oson kod yozishga, Responsive Design'ga va foydalanuvchi tajribasini (UX) optimallashtirishga katta e'tibor beraman. **Zamonaviy freymvorklar** (React/Vue/Angular) bilan ishlashda qat'iy va doimiy o'suvchi mutaxassisman.
-            </p>
-            
-            <div class="features-grid sixteen-items">
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-handshake"></i>
-                    <h4>Jamoaviy Ish</h4>
-                    <p>Agile/Scrum metodologiyalari bo'yicha dizaynerlar va backend jamoasi bilan samarali hamkorlik.</p>
-                </div>
+            <section id="about" class="section">
+                <div class="container">
+                    <h3 class="section-title" data-key="title_about">Men haqimda</h3>
+                    
+                    <div class="about-content">
+                        <div class="features-grid twenty-six-items">
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-handshake"></i>
+                                <h4 data-key="feature_team_work_title">Jamoaviy Ish</h4>
+                                <p data-key="feature_team_work_desc">Dizaynerlar va backend bilan samarali hamkorlik.</p>
+                            </div>
 
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-clock"></i>
-                    <h4>Vaqt Boshqaruvi</h4>
-                    <p>Topshiriqlarni rejalashtirish va loyiha muddatlariga qat'iy rioya qilish.</p>
-                </div>
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-clock"></i>
+                                <h4 data-key="feature_time_management_title">Vaqt Boshqaruvi</h4>
+                                <p data-key="feature_time_management_desc">Muddatlarga qat'iy rioya qilish va rejalashtirish.</p>
+                            </div>
 
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-search-plus"></i>
-                    <h4>Detailga E'tibor</h4>
-                    <p>Dizayn va texnik spetsifikatsiyalarning eng mayda detallarigacha sinchkovlik bilan ijro etish.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-lightbulb"></i>
-                    <h4>Muammolarni Yechish</h4>
-                    <p>Murakkab UI/UX qiyinchiliklariga mantiqiy va innovatsion yechimlar topish.</p>
-                </div>
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-search-plus"></i>
+                                <h4 data-key="feature_detail_focus_title">Detailga E'tibor</h4>
+                                <p data-key="feature_detail_focus_desc">Dizayndagi eng mayda detallarni aniq ijro etish.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4 data-key="feature_problem_solving_title">Muammolarni Yechish</h4>
+                                <p data-key="feature_problem_solving_desc">Murakkab qiyinchiliklarga innovatsion yechimlar.</p>
+                            </div>
 
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h4>Doimiy O'rganish</h4>
-                    <p>Soha yangiliklari va yangi texnologiyalarni o'rganishga bo'lgan yuqori ishtiyoq.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-user-check"></i>
-                    <h4>UX Ustuvorligi</h4>
-                    <p>Foydalanuvchi tajribasini (UX) har doim ustuvor qo'yish va qulaylikni ta'minlash.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-code-branch"></i>
-                    <h4>Kod Sifati</h4>
-                    <p>Toza, o'qiladigan va qayta ishlatiladigan (reusable) kod yozish standartlari.</p>
-                </div>
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h4 data-key="feature_constant_learning_title">Doimiy O'rganish</h4>
+                                <p data-key="feature_constant_learning_desc">Yangi texnologiyalarni o'rganishga yuqori ishtiyoq.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-user-check"></i>
+                                <h4 data-key="feature_ux_priority_title">UX Ustuvorligi</h4>
+                                <p data-key="feature_ux_priority_desc">Foydalanuvchi tajribasini birinchi o'ringa qo'yish.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-code-branch"></i>
+                                <h4 data-key="feature_code_quality_title">Kod Sifati</h4>
+                                <p data-key="feature_code_quality_desc">Toza, o'qiladigan va qayta ishlatiladigan (reusable) kod.</p>
+                            </div>
 
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-bug"></i>
-                    <h4>Testing & Debugging</h4>
-                    <p>Tizimli sinash va xatolarni (bug) tezda aniqlash hamda bartaraf etish.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h4>Moslashuvchanlik</h4>
-                    <p>Veb-saytlarning barcha ekran o'lchamlari va qurilmalarda mukammal ishlashini ta'minlash.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-tachometer-alt"></i>
-                    <h4>Ishlashni Optimizatsiyasi</h4>
-                    <p>Yuklanish tezligini oshirish va yuqori ishlash ko'rsatkichlariga erishish (Performance).</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-user-tie"></i>
-                    <h4>O'z-o'zini boshqarish</h4>
-                    <p>Topshiriqlarni mustaqil ravishda boshqarish va minimal nazorat ostida samarali ishlash.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-code-commit"></i>
-                    <h4>Versiya Boshqaruvi (Git)</h4>
-                    <p>Git va GitHub/GitLab yordamida kodni boshqarish, branchlar bilan ishlash tajribasi.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-comments"></i>
-                    <h4>Samarali Aloqa</h4>
-                    <p>Texnik g'oyalarni hamkasblar va mijozlarga aniq va tushunarli yetkazish.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>Loyiha Tahlili</h4>
-                    <p>Talablar to'plamini o'rganish va ularni texnik yechimlarga aylantirish qobiliyati.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fab fa-chrome"></i>
-                    <h4>Kross-Brauzer Moslik</h4>
-                    <p>Veb-ilovalarning Chrome, Firefox, Safari va Edge brauzerlarida bir xil ishlashini ta'minlash.</p>
-                </div>
-                
-                <div class="feature-card scroll-animate">
-                    <i class="fas fa-palette"></i>
-                    <h4>Dizayn Prinsiplari</h4>
-                    <p>UI/UX dizayn prinsiplarini bilish va ularni kodda aniq aks ettirish.</p>
-                </div>
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-bug"></i>
+                                <h4 data-key="feature_testing_debugging_title">Testing & Debugging</h4>
+                                <p data-key="feature_testing_debugging_desc">Tizimli sinash va xatolarni tezda bartaraf etish.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4 data-key="feature_adaptability_title">Moslashuvchanlik</h4>
+                                <p data-key="feature_adaptability_desc">Barcha ekranlarda mukammal ishlashni ta'minlash.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <h4 data-key="feature_performance_optimization_title">Ishlashni Optimizatsiyasi</h4>
+                                <p data-key="feature_performance_optimization_desc">Yuqori yuklanish tezligiga erishish (Performance).</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-user-tie"></i>
+                                <h4 data-key="feature_self_management_title">O'z-o'zini boshqarish</h4>
+                                <p data-key="feature_self_management_desc">Topshiriqlarni mustaqil va samarali boshqarish.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-code-commit"></i>
+                                <h4 data-key="feature_version_control_title">Versiya Boshqaruvi</h4>
+                                <p data-key="feature_version_control_desc">Git va GitHub/GitLab yordamida kodni boshqarish.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-comments"></i>
+                                <h4 data-key="feature_effective_communication_title">Samarali Aloqa</h4>
+                                <p data-key="feature_effective_communication_desc">G'oyalarni aniq va tushunarli yetkazish qobiliyati.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-chart-line"></i>
+                                <h4 data-key="feature_project_analysis_title">Loyiha Tahlili</h4>
+                                <p data-key="feature_project_analysis_desc">Talablarni texnik yechimlarga aylantirish.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fab fa-chrome"></i>
+                                <h4 data-key="feature_cross_browser_title">Kross-Brauzer Moslik</h4>
+                                <p data-key="feature_cross_browser_desc">Barcha asosiy brauzerlarda bir xil ishlash.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-palette"></i>
+                                <h4 data-key="feature_design_principles_title">Dizayn Prinsiplari</h4>
+                                <p data-key="feature_design_principles_desc">UI/UX dizayn prinsiplarini amalda qo'llash.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-server"></i>
+                                <h4 data-key="feature_api_integration_title">API Integratsiyasi</h4>
+                                <p data-key="feature_api_integration_desc">RESTful API va ma'lumotlar bilan ishlash tajribasi.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-universal-access"></i>
+                                <h4 data-key="feature_accessibility_title">Veb Erkinligi (A11y)</h4>
+                                <p data-key="feature_accessibility_desc">Barcha foydalanuvchilar uchun qulaylikni ta'minlash.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4 data-key="feature_security_title">Xavfsizlik Tushunchasi</h4>
+                                <p data-key="feature_security_desc">Frontend darajasidagi asosiy xavfsizlik amaliyotlari.</p>
+                            </div>
 
-            </div>
-        </div>
-    </div>
-</section>
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-laptop-code"></i>
+                                <h4 data-key="feature_animation_title">Animatsiya & Interaktivlik</h4>
+                                <p data-key="feature_animation_desc">Samarali CSS va JS animatsiyalarini yaratish.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-sitemap"></i>
+                                <h4 data-key="feature_component_approach_title">Komponentli Yondashuv</h4>
+                                <p data-key="feature_component_approach_desc">Katta loyihalarda komponent asosida ishlash.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-code"></i>
+                                <h4 data-key="feature_syntactic_purity_title">Sintaktik Tozalik</h4>
+                                <p data-key="feature_syntactic_purity_desc">Kodni Linting va Formatting vositalari bilan ishlash.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-cogs"></i>
+                                <h4 data-key="feature_build_tools_title">Build Tools (Webpack/Vite)</h4>
+                                <p data-key="feature_build_tools_desc">Loyihalarni optimallashtirish va to'plash (bundling).</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-language"></i>
+                                <h4 data-key="feature_i18n_title">I18n (Lokalizatsiya)</h4>
+                                <p data-key="feature_i18n_desc">Ko'p tilli veb-saytlarni yaratish tajribasi.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-cubes"></i>
+                                <h4 data-key="feature_modularity_title">Modullik Dizayni</h4>
+                                <p data-key="feature_modularity_desc">Kodni kichik, bog'liq bo'lmagan modullarga ajratish.</p>
+                            </div>
+                            
+                            <div class="feature-card scroll-animate">
+                                <i class="fas fa-compress-alt"></i>
+                                <h4 data-key="feature_refactoring_title">Kodni Refaktorlash</h4>
+                                <p data-key="feature_refactoring_desc">Mavjud kod bazasini yaxshilash va tozalash.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section id="skills" class="section">
                 <div class="container">
-                    <h3 class="section-title">Ko'nikmalar</h3>
+                    <h3 class="section-title" data-key="title_skills">Ko'nikmalar</h3>
 
                     <div class="skill-group scroll-animate">
-                        <h4><i class="fas fa-code"></i> Frontend (Interfeys)</h4>
+                        <h4 data-key="skill_group_frontend_title"><i class="fas fa-code"></i> Frontend (Interfeys)</h4>
                         <div class="skills-grid">
-                            <div class="skill-card primary-skill">HTML5 & CSS3</div>
-                            <div class="skill-card primary-skill">JavaScript (ES6+)</div>
-                            <div class="skill-card">Responsive Design</div>
-                            <div class="skill-card">Bootstrap</div>
-                            <div class="skill-card">Sass/Less</div>
+                            <div class="skill-card primary-skill" data-key="skill_html_css">HTML5 & CSS3</div>
+                            <div class="skill-card primary-skill" data-key="skill_js">JavaScript (ES6+)</div>
+                            <div class="skill-card" data-key="skill_responsive">Responsive Design</div>
+                            <div class="skill-card" data-key="skill_bootstrap">Bootstrap</div>
+                            <div class="skill-card" data-key="skill_sass">Sass/Less</div>
                         </div>
                     </div>
 
                     <div class="skill-group scroll-animate">
-                        <h4><i class="fas fa-tools"></i> Asboblar & Boshqalar</h4>
+                        <h4 data-key="skill_group_tools_title"><i class="fas fa-tools"></i> Asboblar & Boshqalar</h4>
                         <div class="skills-grid">
-                            <div class="skill-card">Git & GitHub</div>
-                            <div class="skill-card">Figma (Design Reading)</div>
-                            <div class="skill-card">Web Performance</div>
-                            <div class="skill-card">VS Code</div>
+                            <div class="skill-card" data-key="skill_git">Git & GitHub</div>
+                            <div class="skill-card" data-key="skill_figma">Figma (Design Reading)</div>
+                            <div class="skill-card" data-key="skill_performance">Web Performance</div>
+                            <div class="skill-card" data-key="skill_vscode">VS Code</div>
                         </div>
                     </div>
 
-                </div>
-            </section>
-
-            <section id="projects" class="section">
-                <div class="container">
-                    <h3 class="section-title">Loyihalar</h3>
-                    
-                    <div class="projects-grid">
-                        <div class="project-card scroll-animate">
-                            <div class="project-card-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f47?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="E-Commerce Platformasi" class="project-img">
-                            </div>
-                            <div class="project-card-content">
-                                <h4>E-Commerce Platformasi (Maket)</h4>
-                                <p>To'liq responsivlikka ega zamonaviy E-tijorat sahifalarining (Katalog, Mahsulot sahifasi, Korzina) vizual maketi.</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/munisbekraimjonov33-spec" target="_blank" class="project-btn"><i class="fab fa-github"></i> Kod</a>
-                                <a href="#" target="_blank" class="project-btn primary-btn">Ko'rish (Demo)</a>
-                            </div>
-                        </div>
-
-                        <div class="project-card scroll-animate">
-                            <div class="project-card-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1549418617-640a3458d9ec?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Havo Harorati Ilovasi" class="project-img">
-                            </div>
-                            <div class="project-card-content">
-                                <h4>Havo Harorati Ilovasi</h4>
-                                <p>JavaScript va tashqi API'lar yordamida yaratilgan, foydalanuvchi joylashuviga asoslangan ob-havo ma'lumotlarini taqdim etuvchi ilova.</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/munisbekraimjonov33-spec" target="_blank" class="project-btn"><i class="fab fa-github"></i> Kod</a>
-                                <a href="#" target="_blank" class="project-btn primary-btn">Ko'rish (Demo)</a>
-                            </div>
-                        </div>
-
-                        <div class="project-card scroll-animate">
-                            <div class="project-card-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1531403009852-ff45b141680d?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Korporativ Landing Page" class="project-img">
-                            </div>
-                            <div class="project-card-content">
-                                <h4>Korporativ Landing Page</h4>
-                                <p>Brend kimligini aks ettiruvchi, silliq animatsiyalar va zamonaviy tipografiyaga ega marketing sahifasi.</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/munisbekraimjonov33-spec" target="_blank" class="project-btn"><i class="fab fa-github"></i> Kod</a>
-                                <a href="#" target="_blank" class="project-btn primary-btn">Ko'rish (Demo)</a>
-                            </div>
-                        </div>
-                        
-                    </div>
                 </div>
             </section>
 
             <section id="contact" class="section">
                 <div class="container">
-                    <h3 class="section-title">Aloqa</h3>
+                    <h3 class="section-title" data-key="title_contact">Aloqa</h3>
                     <div class="contact-info">
-                        <p><i class="fas fa-phone-alt"></i> Murojaat uchun: <strong>+998 97-432-23-41</strong></p>
-                        <p><i class="fas fa-envelope"></i> Email: <strong>munisbek.dev@example.com</strong></p>
+                        <p><i class="fas fa-phone-alt"></i> <span data-key="contact_phone_text">Murojaat uchun:</span> <strong><a href="https://t.me/Munisbek_Raimjonov" target="_blank" 
+                        style="padding:5px 10px; background:#0088cc; color:white; 
+                        border-radius:50px; text-decoration:none;" data-key="contact_link_text">Bog'lanish</a></strong></p>
+                        
+                        <p><i class="fas fa-envelope"></i> <span data-key="contact_email_text">Email:</span> <strong>munisbek.dev@example.com</strong></p>
                     </div>
 
                     <div class="social-icons">
                         <a href="https://t.me/code_zone_uz" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-                        <a href="https://www.instagram.com/Sizning_Instagram_Profilingiz" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/channel/Sizning_YouTube_Kanal_IDingiz" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/Raimjonov_08" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/@Zortex_play" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="https://github.com/munisbekraimjonov33-spec/Munisbek.git" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
@@ -255,9 +289,26 @@
 
         <footer>
             <div class="container">
-                <p>&copy; 2025 Munisbek Raimjonov. Barcha huquqlar himoyalangan.</p>
+                <p data-key="footer_text"> Saytlar arzon va hamyonbop narxlarda yasab beramiz.</p>
             </div>
         </footer>
+
+        <button id="chatbot-toggle" data-key="chatbot_toggle_title" title="AI Chatbotni ochish"><i class="fas fa-robot"></i></button>
+
+        <div id="chatbot-window">
+            <div class="chat-header" data-key="chat_header">
+                Munisbek AI yordamchisi
+            </div>
+            <div id="chat-messages">
+                <div class="message ai">
+                    <div class="message-bubble" data-key="chat_welcome">Salom! Men Munisbekning AI yordamchisiman. Uning tajribasi, ko'nikmalari yoki loyihalari haqida savol bering.</div>
+                </div>
+            </div>
+            <form class="chat-input-form" id="chat-form">
+                <input type="text" id="chat-input" data-key="chat_input_placeholder" placeholder="Savolingizni yozing..." required>
+                <button type="submit" id="chat-send-btn" data-key="chat_send_title" title="Yuborish"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
 
         <script src="diplomishi.js"></script>
     </body>
