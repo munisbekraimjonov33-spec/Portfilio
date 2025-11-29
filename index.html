@@ -8,6 +8,7 @@
 
         <style>
             /* Custom CSS Variables - Oson boshqarish uchun */
+/* Custom CSS Variables - Oson boshqarish uchun */
 :root {
     /* Umumiy stillar */
     --font-family: 'Poppins', sans-serif;
@@ -151,7 +152,7 @@ nav a:hover:after {
     color: white;
 }
 
-/* --- Tilni Tanlash (Language Selector) Stillari - YANGI KOD --- */
+/* --- Tilni Tanlash (Language Selector) Stillari --- */
 .lang-selector-wrapper {
     margin-left: 20px;
 }
@@ -165,13 +166,13 @@ nav a:hover:after {
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
-    appearance: none; /* Standart selektorni yashirish */
+    appearance: none; 
     /* Pastga yo'naltirilgan o'q (ikonka) uchun stil */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23212529'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); 
     background-repeat: no-repeat;
     background-position: right 8px center;
     background-size: 12px;
-    padding-right: 30px; /* Ikonka uchun joy qoldirish */
+    padding-right: 30px; 
 }
 
 /* Dark Mode uchun Ikonka rangi */
@@ -183,7 +184,6 @@ body.dark-mode #language-selector {
     outline: none;
     border-color: var(--primary-color);
 }
-/* --- Tilni Tanlash Stillari Tugadi --- */
 
 
 /* --- BUTTONS --- */
@@ -271,9 +271,9 @@ body.dark-mode #language-selector {
 
 #typing-text-container .role {
     font-weight: 600;
-    color: var(--role-color); /* Yangilangan rang */
-    display: inline-block; /* Yangi qator uchun to'g'ri ishlashi uchun */
-    margin-top: 10px; /* Yangi qator matni ustidagi bo'shliq */
+    color: var(--role-color); 
+    display: inline-block; 
+    margin-top: 10px; 
 }
 
 /* Kursor Animatsiyasi */
@@ -603,17 +603,17 @@ footer {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transform: scale(0.5); /* Boshlanishda kichik bo'lishi */
+    transform: scale(0.5); 
     opacity: 0;
-    pointer-events: none; /* Kliklarni o'chirish */
+    pointer-events: none; 
     transform-origin: bottom right;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Elastik o'tish */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
 #chatbot-window.open {
     transform: scale(1);
     opacity: 1;
-    pointer-events: auto; /* Kliklarni yoqish */
+    pointer-events: auto; 
 }
 
 /* Chat Sarlavhasi */
@@ -640,7 +640,7 @@ footer {
 .message {
     margin-bottom: 15px;
     display: flex;
-    max-width: 100%; /* Qutining ichida 100% olishi */
+    max-width: 100%; 
 }
 
 .message.user {
@@ -658,7 +658,7 @@ footer {
     line-height: 1.4;
     font-size: 0.95rem;
     word-break: break-word;
-    max-width: 85%; /* Matnni o'rash uchun */
+    max-width: 85%; 
 }
 
 .message.user .message-bubble {
@@ -716,22 +716,26 @@ footer {
     header .container {
         flex-direction: column;
     }
+    
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
     nav {
         margin-top: 15px;
-        display: flex; /* Flexbox navigatsiyani ushlab turadi */
+        display: flex; 
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
+    
     nav a {
         margin: 5px 10px;
+        font-size: 0.9rem; /* Nav link o'lchamini kichraytiramiz */
     }
     
-    /* Til tanlash elementini pastki qismga tushirish (agar kerak bo'lsa) */
-    .lang-selector-wrapper {
+    /* Til tanlash va Theme toggle elementlarini yonma-yon qo'yamiz */
+    #language-selector, #theme-toggle {
         margin-top: 10px;
         margin-left: 10px;
     }
@@ -769,6 +773,8 @@ footer {
         right: 15px;
         width: calc(100% - 30px);
         height: 400px;
+        max-width: 450px; /* Maksimal kenglikni belgilash */
+        left: auto;
     }
 }
 
@@ -777,11 +783,89 @@ footer {
         font-size: 2rem;
         margin-bottom: 30px;
     }
-    /* Kichik ekranlarda navigatsiya linklarini vertikal joylash */
-    nav a {
-        display: block;
-        margin: 10px 0;
+    
+    header .container {
+        padding: 0 15px;
     }
+    
+    /* Kichik ekranlarda navigatsiya linklarini yaxshilash */
+    nav {
+        justify-content: space-around;
+    }
+    nav a, #language-selector, #theme-toggle {
+        margin: 5px 5px;
+        flex-basis: auto;
+        font-size: 0.85rem;
+    }
+    nav a:nth-child(4) { /* Oxirgi linkdan keyin keyingi qatorga o'tish (4 ta link + 2 ta tugma uchun) */
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
+    /* Hero bo'limi matnini optimallashtirish */
+    #hero {
+        min-height: 85vh;
+    }
+    
+    #typing-text-container {
+        font-size: 1.8rem;
+        min-height: 80px;
+    }
+    
+    #typing-text-container .highlight, #typing-text-container .role {
+        font-size: 1.8rem; 
+    }
+    
+    .cursor {
+        font-size: 2.2rem;
+    }
+    
+    .summary-text {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    /* 3D Laptopni kichraytirish */
+    #laptop-3d-wrapper {
+        height: 350px;
+        transform: scale(0.9);
+    }
+    .laptop-model {
+        width: 300px; 
+        height: 200px;
+    }
+    .app-icon {
+        font-size: 1.8rem;
+        padding: 8px;
+    }
+    
+    /* About va Skills uchun optimallash */
+    .features-grid {
+        grid-template-columns: 1fr; /* Faqat bitta ustun */
+        gap: 15px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .skill-group h4 {
+        font-size: 1.5rem;
+    }
+    
+    .skills-grid {
+        justify-content: center; 
+    }
+    
+    .skill-card {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-info p {
+        font-size: 1rem;
+    }
+    
     .social-icons a {
         margin: 0 10px;
     }
